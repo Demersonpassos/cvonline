@@ -112,7 +112,7 @@
             li{    
             display: inline;
             text-decoration: none;
-            padding: 0px 10px 0px 0px ;
+            padding: 0px 0px 0px 0px ;
             }
             img{
                 position: static;
@@ -141,12 +141,15 @@
             }
             ul, li{
             position: relative;
+            margin: 11px 0;
+
             }
             li ul {
                 position: absolute; /* Posiciona a lista suspensa */
                 left: 0px; /* Alinha a lista suspensa ao lado do item pai */
                 top: 0;
                 display: none; /* Esconde a lista suspensa por padrão */
+               
             }
             
             ul li a {
@@ -155,7 +158,8 @@
                 color: var(--co0);
                 background-color: var(--co5);
                 padding: 5px;
-                border: 1px solid var(--co6);
+                font-size: 25px;
+                
             }
             ul li a:hover {
                 text-decoration: underline;
@@ -165,11 +169,24 @@
             }
             li:hover ul {
                 display: block; /* Exibe a lista suspensa quando o cursor passa sobre o item pai */
+                background-color:var(--co5);
+                width:100%;
+                height:300px;
+                top: 25px;
+                
             }
             }
              @media only screen and (min-width: 991px) {
             .opcoes > a {
                 display: none; /* Esconde o texto "Opções" em telas maiores */
+            }
+            .fechar > a {
+                display: none;
+            }
+            
+            .opcoes ul{
+                display: block;
+
             }
                 
         }   
@@ -186,14 +203,16 @@
         </header>
         <nav>
             <ul>
-                <li class="opcoes"><a href="#">Opções</a>
+                <li class="opcoes">
+                    <a href="#">Opções</a>
                     <ul>
-                        <a href="index.html">Home</a>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="sobre.html">Sobre Mim</a></li>
-
                         <li><a href="fomacao.html">Formação</a></li>
                         <li><a href="#">Portifólio</a></li>
                         <li><a href="#">Contato</a></li>
+                        <li class="fechar"><a href="sobre.html">Fechar Menu</a></li>
+
                     </ul>
                 </li>    
             </ul>
@@ -204,8 +223,6 @@
         <div class="sobre">
             <h2>Sobre mim</h2>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur perspiciatis neque ullam ex, quasi labore numquam error iste placeat dolore? Necessitatibus temporibus cum rerum architecto officia laboriosam et sed nam! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, quasi? Sint ea voluptatem sit, est rerum reiciendis! Adipisci, debitis nisi ipsum accusantium temporibus voluptates at, fugit voluptas blanditiis ullam accusamus?</p>
-
-
         </div>
 
         <footer>
