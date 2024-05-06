@@ -64,14 +64,20 @@
             left: 0;
             width: 100%;
         }
+        
+
         ul{
             margin: 16px 0px 10px 0px;
             padding: 0%;
+            position: relative;
         }
         li, a{
             display: inline;
             text-decoration: none;
         }
+        
+
+
         a{
             padding: 10px;
             color: var(--co0);
@@ -114,6 +120,9 @@
                 grid-area: 3 /1 / 5 / 11;
                 
             }
+            .opcoes{
+                display:block ;
+            }
             .sobre{
                 background-color: var(--co5);
                 grid-area: 6 / 1 / 9 / 11;
@@ -124,6 +133,43 @@
                 background-color: var(--co7);
                 grid-area: 9 / 1 / 9 / 11;
                 color: var(--co0);
+            }
+
+            .opcoes{
+                text-align: left;
+                color: var(--co0);
+            }
+            ul, li{
+            position: relative;
+            }
+            li ul {
+                position: absolute; /* Posiciona a lista suspensa */
+                left: 0px; /* Alinha a lista suspensa ao lado do item pai */
+                top: 0;
+                display: none; /* Esconde a lista suspensa por padrão */
+            }
+            
+            ul li a {
+                display: block;
+                text-decoration: none;
+                color: var(--co0);
+                background-color: var(--co5);
+                padding: 5px;
+                border: 1px solid var(--co6);
+            }
+            ul li a:hover {
+                text-decoration: underline;
+                font-weight: bold;
+                background: var(--co2);
+                color: white;
+            }
+            li:hover ul {
+                display: block; /* Exibe a lista suspensa quando o cursor passa sobre o item pai */
+            }
+            }
+             @media only screen and (min-width: 991px) {
+            .opcoes > a {
+                display: none; /* Esconde o texto "Opções" em telas maiores */
             }
                 
         }   
@@ -140,11 +186,16 @@
         </header>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="sobre.html">Sobre Mim</a></li>
-                <li><a href="fomacao.html">Formação</a></li>
-                <li><a href="#">Portifólio</a></li>
-                <li><a href="#">Contato</a></li>
+                <li class="opcoes"><a href="#">Opções</a>
+                    <ul>
+                        <a href="index.html">Home</a>
+                        <li><a href="sobre.html">Sobre Mim</a></li>
+
+                        <li><a href="fomacao.html">Formação</a></li>
+                        <li><a href="#">Portifólio</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </li>    
             </ul>
         </nav>
 
