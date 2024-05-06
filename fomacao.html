@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Online</title>
+    <style>
+        @font-face {
+            font-family: 'titulo';
+            src: url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap') format('opentype');
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap');
+
+        :root{
+            --co0: white;
+            --co1: #227AE6;
+            --co2: #227AE6;
+            --co3: #22B7E6;
+            --co4: #1cb473;
+            --co5: #223DE6;
+            --co6: #1b2eac;
+            --co7: #57C4E6;
+            
+        }
+        body{
+            text-align: center;
+            margin: 0%;
+        }
+        .container{
+            display:grid;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: 50px 50px  400px 250px  100px;
+        }
+        
+        h1, h2{
+            color: var(--co0);
+            font-family: 'titulo', sans-serif;
+            text-align: center;
+            
+        }
+        p{
+            color: var(--co0);
+            padding: 0px 8px 0px 8px;
+            font-family: 'Montserrat', sans-serif;
+            text-indent:5px
+            
+            
+        }
+        header{
+            grid-area: 1 / 1 / 2 / 11;
+            background-color: var(--co5);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 5px;
+        }
+        nav{
+            grid-area: 2 / 1 / 3 / 11 ;
+            background-color: var(--co5);
+            position: fixed;
+            top: 59px;
+            left: 0;
+            width: 100%;
+        }
+        ul{
+            margin: 16px 0px 10px 0px;
+        }
+        li, a{
+            display: inline;
+            text-decoration: none;
+        }
+        a{
+            padding: 10px;
+            color: var(--co0);
+            background-color: var(--co2);
+            margin: 16px 0px 0px 0px;
+            font-family: 'titulo', sans-serif;
+        }
+        img{
+
+            grid-area: 3/ 6 / 3 / 9;
+            width: 400px;
+            border-radius: 10px;
+            
+        }
+        .formacao{
+            background-color: var(--co5);
+            grid-area: 3 / 3 / 3 / 6;
+            text-align: justify;
+        }
+        footer{
+                background-color: var(--co7);
+                grid-area: 7 / 1 / 7 / 11;
+                color: var(--co0);
+            }
+            @media only screen and (max-width: 990px){
+            
+            .container{
+            display:grid;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: 50px 50px 50px 240px 200px 200px 100px 50px 50px;
+            }
+
+            img{
+                position: static;
+                width:100%;
+                grid-area: 3 /1 / 5 / 11;
+                
+            }
+            .formacao{
+                background-color: var(--co5);
+                grid-area: 6 / 1 / 9 / 11;
+            }
+            
+            
+            footer{
+                background-color: var(--co7);
+                grid-area: 9 / 1 / 9 / 11;
+                color: var(--co0);
+            }
+                
+        }   
+            
+                
+        
+    </style>
+</head>
+<body>
+    body>
+    <div class="container">
+        <header>
+            <h1>CV Online</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre Mim</a></li>
+                <li><a href="fomacao.html">Formação</a></li>
+                <li><a href="#">Portifólio</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+
+        <img src="imagens/formacao.jpg" alt="formacao">
+
+        <div class="formacao">
+            <h2>Formação</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur perspiciatis neque ullam ex, quasi labore numquam error iste placeat dolore? Necessitatibus temporibus cum rerum architecto officia laboriosam et sed nam! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, quasi? Sint ea voluptatem sit, est rerum reiciendis! Adipisci, debitis nisi ipsum accusantium temporibus voluptates at, fugit voluptas blanditiis ullam accusamus?</p>
+
+
+        </div>
+
+        <footer>
+            Desenvolvido por Demerson Passos
+        </footer>
+</body>
+</html>
