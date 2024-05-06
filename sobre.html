@@ -10,7 +10,19 @@
             src: url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap') format('opentype');
         }
         @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap');
-
+        /*
+        :root{
+            --co0: white;
+            --co1: #227AE6;
+            --co2: #227AE6;
+            --co3: #22B7E6;
+            --co4: #1cb473;
+            --co5: #223DE6;
+            --co6: #1b2eac;
+            --co7: #57C4E6;
+            
+        }
+        */
         :root{
             --co0: white;
             --co1: #227AE6;
@@ -107,7 +119,7 @@
             .container{
             display:grid;
             grid-template-columns: repeat(10, 1fr);
-            grid-template-rows: 50px 50px 50px 240px 200px 200px 100px 50px 50px;
+            grid-template-rows: 50px 50px 400px auto 100px;
             }
             li{    
             display: inline;
@@ -115,17 +127,24 @@
             padding: 0px 0px 0px 0px ;
             }
             img{
-                position: static;
+                position:static;
+
                 width:100%;
                 grid-area: 3 /1 / 5 / 11;
                 
             }
+            
             .opcoes{
                 display:block ;
+
             }
             .sobre{
                 background-color: var(--co5);
-                grid-area: 6 / 1 / 9 / 11;
+                grid-area:4/ 1 / 6 / 11;
+                margin-top: 1px;
+            }
+            .sobre p {
+                margin-top: 1px;
             }
             
             
