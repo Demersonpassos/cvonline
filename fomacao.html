@@ -107,8 +107,15 @@
             grid-area: 3 / 3 / 3 / 6;
             text-align: justify;
             background-color:var(--co5); /* Cinza médio para o bloco de texto */
-            padding: 20px;
             border-radius: 10px;
+            min-width:400px;
+            
+        }
+        .formacao p{
+            text-align: justify;
+            text-indent:20px
+            
+                
         }
         
         footer{
@@ -126,9 +133,13 @@
             }
             
             img{
-                position: static;
-                width: 100%;
-                grid-area: 3 / 1 / 5 / 11;
+                display: block;
+                margin: 0 auto;
+                min-width:300px;
+                max-width: 500px; 
+                width: 100%; /* Garante que a imagem ocupe toda a largura do contêiner */
+                grid-area: 3 / 1 / 4 / 11; /* Ajusta a posição da imagem */
+                height: auto; /* Mantém a proporção da imagem */
             }
             
             .opcoes{
@@ -137,16 +148,20 @@
             }
             
             .formacao{
-                background-color: var(--co3); /* Branco para o bloco de texto */
                 grid-area: 4 / 1 / 6 / 11;
                 margin-top: 1px;
-                padding: 10px;
-                border-radius: 10px;
+                
+                border-radius: 0px;
+                background-color:var(--co5);
+                text-align: center; /* Centraliza o texto */
+                max-width: 500px; /* Define a largura máxima do bloco de texto */
+                margin: 0 auto; /* Centraliza o bloco de texto */
+                height:500px;
+                min-width: 300px;
                 
             }
             
-            .formacao p {
-                margin-top: -10px;
+            .formacao p {       
                 padding: 0px 15px 0px 15px;
                 
             }
