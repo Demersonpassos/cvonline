@@ -110,6 +110,7 @@
             background-color:var(--co5); /* Cinza médio para o bloco de texto */
             padding: 20px;
             border-radius: 10px;
+            min-width: 400px;
         }
         
         footer{
@@ -127,11 +128,13 @@
             }
             
             img{
-
-                position: static;
-                width: 100%;
-                grid-area: 3 / 1 / 5 / 11;
-                
+                display: block;
+                margin: 0 auto;
+                max-width: 500px; /* Define a largura máxima da imagem */
+                width: 100%; /* Garante que a imagem ocupe toda a largura do contêiner */
+                grid-area: 3 / 1 / 4 / 11; /* Ajusta a posição da imagem */
+                width: 100%; /* Garante que a imagem ocupe toda a largura do contêiner */
+                height: auto; /* Mantém a proporção da imagem */
             }
             
             .opcoes{
@@ -145,6 +148,11 @@
                 margin-top: 1px;
                 padding: 10px;
                 border-radius: 10px;
+
+                text-align: center; /* Centraliza o texto */
+                max-width: 500px; /* Define a largura máxima do bloco de texto */
+                margin: 0 auto; /* Centraliza o bloco de texto */
+                height:500px;
                 
                 
             }
@@ -225,9 +233,26 @@
             }
         }
         @media only screen and (max-width: 760px){
+            /*
             .sobre{
                 height:500px;
                 
+            }
+            */
+            
+            .container {
+                grid-template-rows: 50px 50px auto 400px 100px; /* Ajusta a ordem das linhas para acomodar a imagem */
+            }
+
+            .sobre {
+                grid-area: 4 / 1 / 5 / 11; /* Ajusta a posição do bloco de texto */
+                height: auto; /* Define a altura do bloco de texto para automática */
+            }
+
+            img {
+                grid-area: 3 / 1 / 4 / 11; /* Ajusta a posição da imagem */
+                width: 100%; /* Garante que a imagem ocupe toda a largura do contêiner */
+                height: auto; /* Mantém a proporção da imagem */
             }
 
 
