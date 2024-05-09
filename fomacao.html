@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Online</title>
+
     <style>
+        
         @font-face {
             font-family: 'titulo';
             src: url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap') format('opentype');
@@ -39,7 +41,7 @@
             font-family:'titulo',sans-serif ;
         }
         h2{
-            color: var(--co4); /* Azul escuro para títulos */
+            color: var(--co4); 
             font-family: 'titulo', sans-serif;
             text-align: center;
             margin-top: 20px; /* Espaço extra acima do título */
@@ -101,6 +103,7 @@
             grid-area: 3 / 6 / 3 / 9;
             width: 400px;
             border-radius: 10px;
+            
         }
         
         .formacao{
@@ -108,16 +111,13 @@
             text-align: justify;
             background-color:var(--co5); /* Cinza médio para o bloco de texto */
             border-radius: 10px;
-            min-width:300px;
+            min-width: 300px;
             
         }
-        .formacao p{
-            text-align: justify;
+        .formacao  p{
             text-indent:20px
-            
-                
+
         }
-        
         footer{
             background-color: var(--co1); /* Azul marinho para o rodapé */
             grid-area: 7 / 1 / 7 / 11;
@@ -132,18 +132,22 @@
                 grid-template-rows: 50px 50px 400px auto 100px;
             }
             
-            img{
+            .conteudoimg{
                 display: block;
                 margin: 0 auto;
                 min-width:300px;
                 max-width: 500px; 
                 width: 100%; /* Garante que a imagem ocupe toda a largura do contêiner */
                 grid-area: 3 / 1 / 4 / 11; /* Ajusta a posição da imagem */
+                width: 100%; /* Garante que a imagem ocupe toda a largura do contêiner */
                 height: auto; /* Mantém a proporção da imagem */
+                
             }
             
             .opcoes{
                 display: block;
+                text-align: left;
+                color: var(--co3); /* Texto branco */
                 
             }
             
@@ -159,10 +163,13 @@
                 height:500px;
                 min-width: 300px;
                 
+                
             }
             
-            .formacao p {       
+            .formacao p {
+                margin-top: -10px;
                 padding: 0px 15px 0px 15px;
+                text-align: justify;
                 
             }
             
@@ -180,7 +187,8 @@
             
             ul, li{
                 position: relative;
-                margin: 11px 0;
+                margin: -3px 0;
+                padding: 0px;
             }
             
             li ul {
@@ -212,8 +220,12 @@
                 background-color: var(--co1); /* Azul marinho para botões */
                 width: 100%;
                 height: 300px;
-                top: 25px;
+                top: 33px;
                 
+                
+            }
+            ul img{
+                width:35px;
             }
         }
         
@@ -226,6 +238,9 @@
             .fechar > a {
                 display: none;
             }
+            ul img{
+                display: none;
+            }
             
             .opcoes ul{
                 display: block;
@@ -234,14 +249,8 @@
             a{
                 border: solid 1px var(--co4);
             }
-            
         }
-        @media only screen and (max-width: 760px){
-            .formacao{
-                height:500px;
-                
-            }
-        }
+        
     </style>
 </head>
 <body>
@@ -252,20 +261,19 @@
         <nav>
             <ul>
                 <li class="opcoes">
-                    <a href="#">Opções</a>
+                    <img src="imagens/menu.png" alt="">
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="sobre.html">Sobre Mim</a></li>
                         <li><a href="fomacao.html">Formação</a></li>
                         <li><a href="#">Portifólio</a></li>
                         <li><a href="#">Contato</a></li>
-                        <li class="fechar"><a href="fomacao.html">Fechar Menu</a></li>
                     </ul>
-                </li>    
+                </li>
             </ul>
         </nav>
 
-        <img src="imagens/formacao.jpg" alt="formacao">
+        <img class="conteudoimg" src="imagens/formacao.jpg" alt="sobremim">
 
         <div class="formacao">
             <h2>Formação</h2>
