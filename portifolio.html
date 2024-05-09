@@ -4,25 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Online</title>
+
     <style>
+        
         @font-face {
             font-family: 'titulo';
             src: url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap') format('opentype');
         }
         @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap');
-        /*
-        :root{
-            --co0: white;
-            --co1: #227AE6;
-            --co2: #227AE6;
-            --co3: #22B7E6;
-            --co4: #1cb473;
-            --co5: #223DE6;
-            --co6: #1b2eac;
-            --co7: #57C4E6;
-            
-        }
-        */
+        
         :root{
             --co0: #333333; /* Cinza escuro para textos */
             --co1: #1E2852; /* Azul marinho para cabeçalho e rodapé */
@@ -31,71 +21,71 @@
             --co4: #2C3E50; /* Azul escuro para destaques */
             --co5: #e6e5e5;
             --co6: #1b264e;
-            --co7:#dde8fd;
-            --co8:#cfd3df;
-            --co9:#eeeef1;
-            --co10:#c6d2db;
-
             
         }
+        
         body{
             text-align: center;
             margin: 0%;
             background-color: var(--co3); /* Fundo branco */
             color: var(--co0); /* Texto cinza escuro */
         }
+        
         .container{
-            display:grid;
+            display: grid;
             grid-template-columns: repeat(10, 1fr);
-            grid-template-rows: 50px 50px 50px 200px 250px 250px 50px;
-        }
-        .container > div {
-            margin: 0 10px; /* Adiciona espaçamento horizontal de 10px */
-            margin-bottom: 10px; /* Adiciona espaçamento vertical de 10px */
+            grid-template-rows: 50px 60px 400px 250px 100px;
         }
         h1{
             color: var(--co3);
             font-family:'titulo',sans-serif ;
         }
         h2{
-            color: var(--co4);
+            color: var(--co4); 
             font-family: 'titulo', sans-serif;
-            
+            text-align: center;
+            margin-top: 20px; /* Espaço extra acima do título */
         }
+        
         p{
-            color: var(--co0);
             padding: 0px 8px 0px 8px;
             font-family: 'Montserrat', sans-serif;
-            text-indent:5px
-            
-            
+            text-indent: 5px;
+            color: var(--co0); /* Texto cinza escuro */
         }
+        
         header{
             grid-area: 1 / 1 / 2 / 11;
-            background-color: var(--co1);
+            background-color: var(--co1); /* Azul marinho para o cabeçalho */
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             padding: 5px;
         }
+        
         nav{
-            grid-area: 2 / 1 / 3 / 11 ;
+            grid-area: 2 / 1 / 3 / 11;
             position: fixed;
             top: 59px;
+            bottom: 0px;
             left: 0;
             width: 100%;
+            
         }
+        
         ul{
             margin: 16px 0px 10px 0px;
             padding: 0%;
             position: relative;
         }
+        
         li, a{
             display: inline;
             text-decoration: none;
         }
-        a{
+        
+        a{  
             padding: 10px;
             color: var(--co3); /* Texto branco */
             background-color: var(--co6); /* Azul marinho para botões */
@@ -104,83 +94,110 @@
             border-radius: 5px; /* Borda arredondada */
             transition: background-color 0.3s ease; /* Transição suave de cor */
         }
+
         a:hover {
             background-color: #0E1737; /* Azul mais escuro ao passar o mouse */
         }
-        .bemvindo{
-            background-color: var(--co7);
-            grid-area: 4 / 3 / 4 / 6;
-            font-weight:bold;
+        
+        img{
+            grid-area: 3 / 6 / 3 / 9;
+            width: 400px;
+            border-radius: 10px;
+            
         }
-        .sobre{
-            background-color: var(--co5);
-            grid-area: 4 / 6 / 4 / 9;
-        }
+        
         .formacao{
-            background-color:var(--co8);
-            grid-area: 5 / 3 / 5 / 5;
+            grid-area: 3 / 3 / 3 / 6;
+            text-align: justify;
+            background-color:var(--co5); /* Cinza médio para o bloco de texto */
+            border-radius: 10px;
+            min-width: 300px;
+            
         }
-        .portifolio{
-            background-color: var(--co9);
-            grid-area: 5 / 5 / 5 / 7 ;
-        }
-        .contato{
-            background-color:var(--co10) ;
-            grid-area: 5 / 7 / 5 / 9;
+        .formacao  p{
+            text-indent:20px
+
         }
         footer{
             background-color: var(--co1); /* Azul marinho para o rodapé */
             grid-area: 7 / 1 / 7 / 11;
             color: var(--co3); /* Texto branco */
             padding: 10px;
-            }
-        @media only screen and (max-width: 990px){
-            
-            .container{
-                display:grid;
-                grid-template-columns: repeat(10, 1fr);
-                grid-template-rows: 50px 50px 50px 150px 200px 200px 200px 200px 50px 50px;
-            }
-
-            .bemvindo{
-                grid-area: 4 / 1 / 4 / 11;
-                height: 140px;
-            }
-
-            .sobre{
+        }
         
-                grid-area: 5 / 1 / 5 / 11;
+        @media only screen and (max-width: 990px){
+            .container{
+                display: grid;
+                grid-template-columns: repeat(10, 1fr);
+                grid-template-rows: 50px 50px 400px auto 100px;
             }
             
-            .formacao{
+            .conteudoimg{
+                display: block;
+                margin: 0 auto;
+                min-width:300px;
+                max-width: 500px; 
+                width: 100%; /* Garante que a imagem ocupe toda a largura do contêiner */
+                grid-area: 3 / 1 / 4 / 11; /* Ajusta a posição da imagem */
+                width: 100%; /* Garante que a imagem ocupe toda a largura do contêiner */
+                height: auto; /* Mantém a proporção da imagem */
                 
-                grid-area: 6 / 1 / 6 / 11;
             }
-            .portifolio{
-                
-                grid-area: 7 / 1 / 7 / 11 ;
-            }
-            .contato{
-                
-                grid-area: 8 / 1 / 8 / 11;
-            }
+            
             .opcoes{
                 display: block;
                 text-align: left;
                 color: var(--co3); /* Texto branco */
                 
             }
+            
+            .formacao{
+                grid-area: 4 / 1 / 6 / 11;
+                margin-top: 1px;
+                
+                border-radius: 0px;
+                background-color:var(--co5);
+                text-align: center; /* Centraliza o texto */
+                max-width: 500px; /* Define a largura máxima do bloco de texto */
+                margin: 0 auto; /* Centraliza o bloco de texto */
+                height:500px;
+                min-width: 300px;
+                
+                
+            }
+            
+            .formacao p {
+                margin-top: -10px;
+                padding: 0px 15px 0px 15px;
+                text-align: justify;
+                
+            }
+            
+            footer{
+                background-color: var(--co1); /* Azul marinho para o rodapé */
+                grid-area: 9 / 1 / 9 / 11;
+                color: var(--co3); /* Texto branco */
+            }
+            
+            .opcoes{
+                text-align: left;
+                color: var(--co3); /* Texto branco */
+                
+            }
+            
             ul, li{
                 position: relative;
                 margin: -3px 0;
                 padding: 0px;
             }
+            
             li ul {
                 position: absolute;
                 left: 0px;
                 top: 0;
                 display: none;
             }
+            
             ul li a {
                 display: block;
                 text-decoration: none;
@@ -189,14 +206,15 @@
                 padding: 5px;
                 font-size: 25px;
             }
+            
             ul li a:hover {
                 text-decoration: underline;
                 font-weight: bold;
                 color: var(--co3); /* Texto branco */
                 background-image: linear-gradient(to right, var(--co1), #13203f); /* Gradiente de azul */
                 
-                
             }
+            
             li:hover ul {
                 display: block;
                 background-color: var(--co1); /* Azul marinho para botões */
@@ -206,19 +224,11 @@
                 
                 
             }
-            
             ul img{
                 width:35px;
             }
-            
-            footer{
-                background-color: var(--co1); /* Azul marinho para o rodapé */
-                grid-area: 10 / 1 / 11 / 11;
-                color: var(--co3); /* Texto branco */
-            }
-            
-                
         }
+        
         @media only screen and (min-width: 991px) {
             .opcoes > a {
                 display: none;
@@ -262,28 +272,14 @@
                 </li>
             </ul>
         </nav>
-        <main>
-            <!-- Seu conteúdo principal pode ser adicionado aqui -->
-        </main>
-        <div class="bemvindo">
-            <p>Seja bem-vindo ao meu espaço online! Aqui, você encontrará uma jornada através da minha experiência, habilidades e conquistas. Meu site é uma janela para quem eu sou, o que faço e como posso contribuir.</p>
-        </div>
-        <div class="sobre">
-            <h2>Sobre Mim</h2>
-            <p>Descubra mais sobre minha história, minha jornada profissional. Explore meus interesses, valores e o que me motiva todos os dias.</p>
-        </div>
+
+        <img class="conteudoimg" src="imagens/formacao.jpg" alt="sobremim">
+
         <div class="formacao">
-            <h2>Formação</h2>
-            <p>Conheça minha formação acadêmica, cursos relevantes e certificações. Saiba como minha educação me preparou para os desafios do mundo profissional.</p>
-        </div>
-        <div class="portifolio">
             <h2>Portifólio</h2>
-            <p>Explore uma seleção dos meus projetos e trabalhos anteriores. Veja como minhas habilidades e criatividade se manifestam em projetos reais.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur perspiciatis neque ullam ex, quasi labore numquam error iste placeat dolore? Necessitatibus temporibus cum rerum architecto officia laboriosam et sed nam! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, quasi? Sint ea voluptatem sit, est rerum reiciendis! Adipisci, debitis nisi ipsum accusantium temporibus voluptates at, fugit voluptas blanditiis ullam accusamus?</p>
         </div>
-        <div class="contato">
-            <h2>Contato</h2>
-            <p>Estou sempre aberto a novas oportunidades, colaborações e conexões. Entre em contato comigo para iniciar uma conversa, compartilhar ideias ou discutir possibilidades.</p>
-        </div>
+
         <footer>
             Desenvolvido por Demerson Passos
         </footer>
