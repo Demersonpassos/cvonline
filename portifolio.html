@@ -34,7 +34,7 @@
         .container{
             display: grid;
             grid-template-columns: repeat(10, 1fr);
-            grid-template-rows: 50px 60px 400px 250px 100px;
+            grid-template-rows: 50px 60px 260px 50px 200px;
         }
         h1{
             color: var(--co3);
@@ -118,6 +118,23 @@
             text-indent:20px
 
         }
+        main{
+            grid-area: 3 / 1 / 5 / 11;
+            }
+            
+        .img{
+            grid-area: 3 / 2 / 5 / 4;
+            max-width: 250px;
+        }
+        .img2{
+            grid-area: 3 / 5 / 5 / 7;
+            max-width: 250px;
+        }
+        .img3{
+            grid-area: 3 / 8 / 5 / 10;
+            max-width: 250px;
+        }
+
         footer{
             background-color: var(--co1); /* Azul marinho para o rodapé */
             grid-area: 7 / 1 / 7 / 11;
@@ -132,17 +149,18 @@
                 grid-template-rows: 50px 50px 400px auto 100px;
             }
             
-            .conteudoimg{
+            .img , .img2 , .img3{
                 display: block;
                 margin: 0 auto;
                 min-width:300px;
-                max-width: 500px; 
+                max-width: 400px; 
                 width: 100%; /* Garante que a imagem ocupe toda a largura do contêiner */
                 grid-area: 3 / 1 / 4 / 11; /* Ajusta a posição da imagem */
                 width: 100%; /* Garante que a imagem ocupe toda a largura do contêiner */
                 height: auto; /* Mantém a proporção da imagem */
                 
             }
+            
             
             .opcoes{
                 display: block;
@@ -227,6 +245,8 @@
             ul img{
                 width:35px;
             }
+            
+            
         }
         
         @media only screen and (min-width: 991px) {
@@ -272,11 +292,11 @@
                 </li>
             </ul>
         </nav>
-
-        <img class="conteudoimg" src="imagens/formacao.jpg" alt="sobremim">
-        <img class="conteudoimg2" src="imagens/formacao.jpg" alt="sobremim">
-        <img class="conteudoimg3" src="imagens/formacao.jpg" alt="sobremim">
-
+        
+        <img class="img" src="imagens/formacao.jpg" alt="sobremim">
+        <img class="img2" src="imagens/formacao.jpg" alt="sobremim">
+        <img class="img3" src="imagens/formacao.jpg" alt="sobremim">
+        
         <footer>
             Desenvolvido por Demerson Passos
         </footer>
