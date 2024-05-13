@@ -146,7 +146,7 @@
             .container{
                 display: grid;
                 grid-template-columns: repeat(10, 1fr);
-                grid-template-rows: 50px 50px 400px auto 100px;
+                grid-template-rows: 50px 50px 410px 50px 410px 50px 410px 200px;
             }
             
             .img , .img2 , .img3{
@@ -155,10 +155,19 @@
                 min-width:300px;
                 max-width: 400px; 
                 width: 100%; /* Garante que a imagem ocupe toda a largura do contêiner */
-                grid-area: 3 / 1 / 4 / 11; /* Ajusta a posição da imagem */
                 width: 100%; /* Garante que a imagem ocupe toda a largura do contêiner */
                 height: auto; /* Mantém a proporção da imagem */
                 
+            }
+            
+            .img {
+                grid-area: 3 / 1 / 3 / 11;          
+            }
+            .img2 {
+                grid-area: 5 / 1 / 5 / 11;
+            }
+            .img3 {
+                grid-area: 7 / 1 / 7 / 11;
             }
             
             
@@ -172,7 +181,6 @@
             .formacao{
                 grid-area: 4 / 1 / 6 / 11;
                 margin-top: 1px;
-                
                 border-radius: 0px;
                 background-color:var(--co5);
                 text-align: center; /* Centraliza o texto */
@@ -296,9 +304,11 @@
         <img class="img" src="imagens/formacao.jpg" alt="sobremim">
         <img class="img2" src="imagens/formacao.jpg" alt="sobremim">
         <img class="img3" src="imagens/formacao.jpg" alt="sobremim">
-        
+        <p><a href="#">projeto1</a></p>
+        <p><a href="#">projeto2</a></p>
+        <p><a href="#">projeto3</a></p>
         <footer>
-            Desenvolvido por Demerson Passos
+            Desenvolvido por Demerson Passos     
         </footer>
     </div>
 </body>
