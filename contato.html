@@ -28,7 +28,7 @@
         body{
             text-align: center;
             margin: 0%;
-            background-color: var(--co3); /* Fundo branco */
+            background-color: var(--co9); /* Fundo branco */
             color: var(--co0); /* Texto cinza escuro */
         }
         .container{
@@ -88,6 +88,26 @@
         }
         .content{
             grid-area: 4 / 1 / 5 / 11;
+            
+        }
+        form{
+            background-color: var(--co8);
+            border:solid 1px var(--co10);
+            font-family: 'titulo',sans-serif ;
+            display: block;
+            margin: 0 auto;
+            min-width:300px;
+            max-width: 600px; 
+            width: 100%; /* Garante que a imagem ocupe toda a largura do contêiner */
+            width: 100%; /* Garante que a imagem ocupe toda a largura do contêiner */
+            height: auto; /* Mantém a proporção da imagem */
+            padding: 5px;
+        }
+        button{
+            background-color: var(--co1);
+            color: var(--co3);
+            padding: 5px;
+            po
         }
         footer{
             background-color: var(--co1); /* Azul marinho para o rodapé */
@@ -194,7 +214,7 @@
                 <table >
                     <tr class="a">
                         <th><label for="nome">Nome:</label></th>
-                        <td><input type="text" name="nome" id="nome"></td>
+                        <td><input type="text" name="nome" id="nome" ></td>
                     </tr>
                     <tr>
                         <th><label for="email">Email:</label></th>
@@ -202,7 +222,7 @@
                     </tr>
                     <tr>
                         <th><label for="msg">Digite sua mensagem</label></th>
-                        <td><textarea name="msg" id="msg" cols="40" rows="5">Digite sua mensagem</textarea></td>
+                        <td><textarea name="msg" id="msg" cols="35" rows="10">Digite sua mensagem</textarea></td>
                     </tr>
                     <tr>
                         <td></td>
