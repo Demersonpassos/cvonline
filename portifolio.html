@@ -129,7 +129,13 @@
             border-radius: 20px;
 
         }
-        
+        .link1:hover,
+        .link2:hover,
+        .link3:hover {
+            transform: scale(102%); /* Aumenta um pouco o tamanho da imagem */
+            filter: opacity(85%); /* Define a transparência da imagem */
+        }
+
         .link1 a,
         .link2 a,
         .link3 a {
@@ -155,6 +161,8 @@
             color: var(--co3);
             padding: 10px;
             border-radius: 20px;
+            max-width:500px;
+            margin: auto;
         }
         .link1{
             grid-area: 3 / 2 / 4 / 4;
@@ -186,7 +194,7 @@
             .link3 img 
             {
                 width:380px;
-                padding: 0px 10px 0px 10px;
+               
 
             }
             .link1{
