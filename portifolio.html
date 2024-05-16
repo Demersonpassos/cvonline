@@ -27,10 +27,9 @@
         body{
             text-align: center;
             margin: 0%;
-            background-color: var(--co3); /* Fundo branco */
-            color: var(--co0); /* Texto cinza escuro */
-            padding: 0%;
-           }
+            background-color: var(--co3); 
+            color: var(--co0); 
+        }
         
         .container{
             display: grid;
@@ -45,33 +44,36 @@
             color: var(--co4); 
             font-family: 'titulo', sans-serif;
             text-align: center;
-            margin-top: 20px; /* Espaço extra acima do título */
+            margin-top: 20px; 
         }
         
         p{
             padding: 0px 8px 0px 8px;
             font-family: 'Montserrat', sans-serif;
             text-indent: 5px;
-            color: var(--co0); /* Texto cinza escuro */
+            color: var(--co0);
         }
         
         header{
             grid-area: 1 / 1 / 2 / 11;
-            background-color: var(--co1); /* Azul marinho para o cabeçalho */
+            background-color: var(--co1); 
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             padding: 5px;
+            
         }
         
         nav{
             grid-area: 2 / 1 / 3 / 11;
             position: fixed;
-            top: 59px;
+            top: 59px; 
             bottom: 0px;
             left: 0;
+            height: 50px;
             width: 100%;
+            
             
         }
         
@@ -88,68 +90,22 @@
         
         a{  
             padding: 10px;
-            color: var(--co3); /* Texto branco */
-            background-color: var(--co6); /* Azul marinho para botões */
+            color: var(--co3); 
+            background-color: var(--co6); 
             margin: 16px 0px 0px 0px;
             font-family: 'titulo', sans-serif;
-            border-radius: 5px; /* Borda arredondada */
-            transition: background-color 0.3s ease; /* Transição suave de cor */
+            border-radius: 5px; 
+            transition: background-color 0.3s ease; 
+            
         }
+        
 
         a:hover {
-            background-color: #0E1737; /* Azul mais escuro ao passar o mouse */
+            background-color: #0E1737;
+            width: 100%; 
         }
-        .formacao{
-            grid-area: 3 / 3 / 3 / 6;
-            text-align: justify;
-            background-color:var(--co5); /* Cinza médio para o bloco de texto */
-            border-radius: 10px;
-            min-width: 300px;
-            
-        }
-        .formacao  p{
-            text-indent:20px
-
-        }
-        .img{
-            grid-area: 3 / 2 / 5 / 11;
-            max-width: 250px;
-            }
-            
-        .img2{
-            grid-area: 3 / 5 / 4 / 7;
-            max-width: 250px;
-        }
-        .img3{
-            grid-area: 3 / 8 / 4 / 10;
-            max-width: 250px;
-        }
-        .texto{
-            grid-area: 4 / 2 / 5 / 4;
-            
-        }
-        .texto2{
-            grid-area: 4 / 5 / 5 / 7;
-        }
-        .texto3{
-            grid-area: 4 / 8 / 5 / 10;
-        }
-        .texto > p{
-            background-color: var(--co6);
-            display: inline;
-            color: var(--co5);
-            
-        }
-        .texto2 > p{
-            background-color: var(--co6);
-            display: inline;
-            color: var(--co5);
-        }
-        .texto3 > p{
-            background-color: var(--co6);
-            display: inline;
-            color: var(--co5);
-        }
+        
+        
 
         footer{
             background-color: var(--co1); /* Azul marinho para o rodapé */
@@ -158,42 +114,83 @@
             padding: 10px;
         }
         
+        .link1 , .link2, .link3 {
+            
+            text-decoration: none;
+            text-align: center; 
+              
+        }
+        
+        .link1 img,
+        .link2 img,
+        .link3 img 
+         {
+            width:250px;
+
+        }
+        
+        .link1 a,
+        .link2 a,
+        .link3 a {
+            background-color: transparent;
+            color: inherit;
+            padding: 0;
+            margin: 0;
+            border: none;
+            text-decoration: none;
+            border-radius: 0;
+            transition: none;
+        }
+        
+        .link1 a:hover {
+            background-color: transparent;
+            color: inherit;
+        }
+        .link1{
+            grid-area: 3 / 2 / 4 / 4;
+            padding: 0%;
+            
+        }
+        .link2{
+            grid-area: 3 / 5 / 4 / 7;
+            padding: 0%;
+            
+        }
+        .link3{
+            grid-area: 3 / 8 / 4 / 10;
+            padding: 0%;
+            
+        }
+        
+
+        
+        
         @media only screen and (max-width: 990px){
             .container{
                 display: grid;
                 grid-template-columns: repeat(10, 1fr);
                 grid-template-rows: 50px 50px 410px 50px 410px 50px 410px 50px 100px 200px;
             }
-            
-            .img , .img2 , .img3{
-                display: block;
-                margin: 0 auto;
-                min-width:300px;
-                max-width: 400px; 
-                width: 100%; /* Garante que a imagem ocupe toda a largura do contêiner */
-                width: 100%; /* Garante que a imagem ocupe toda a largura do contêiner */
-                height: auto; /* Mantém a proporção da imagem */
-                
+            .link1 img,
+            .link2 img,
+            .link3 img 
+            {
+                width:380px;
+
+            }
+            .link1{
+                grid-area: 3 / 1 / 4 / 11;
+            }
+            .link2{
+                grid-area: 5 / 1 / 6 / 11;
+            }
+            .link3{
+                grid-area: 7 / 1 / 8 / 11;
             }
             
-            .img {
-                grid-area: 3 / 1 / 3 / 11;          
-            }
-            .img2{
-                grid-area: 5 / 1 / 5 / 11;
-            }
-            .img3 {
-                grid-area: 7 / 1 / 7 / 11;
-            }
-            .texto{
-                grid-area: 4 / 1 / 5 / 11;
-            }
-            .texto2{
-                grid-area: 6 / 1 / 7 / 11;
-            }
-            .texto3{
-                grid-area: 8 / 1 / 9 / 11;
-            }
+            
+            
+            
             
             .opcoes{
                 display: block;
@@ -251,7 +248,8 @@
             li:hover ul {
                 display: block;
                 background-color: var(--co1); /* Azul marinho para botões */
-                width: 100%;
+                max-width:700px;
+                min-width: 400px;
                 height: 300px;
                 top: 33px;
                 
@@ -263,6 +261,7 @@
             
             
         }
+    
         
         @media only screen and (min-width: 991px) {
             .opcoes > a {
@@ -307,24 +306,26 @@
                 </li>
             </ul>
         </nav>
+        <div class="link1">
+            <a href="https://www.youtube.com/watch?v=iyJDuJggiEM&list=RDQMCpeAtcTihcE&index=19" class="linkexe">
+                <img src="imagens/sobre mim.jpg" alt="">
+                <p>projeto1</p>
+            </a>
+        </div>
+        <div class="link2">
+            <a href="https://www.youtube.com/watch?v=iyJDuJggiEM&list=RDQMCpeAtcTihcE&index=19" class="linkexe">
+                <img src="imagens/sobre mim.jpg" alt="">
+                <p>projeto1</p>
+            </a>
+        </div>
+        <div class="link3">
+            <a href="https://www.youtube.com/watch?v=iyJDuJggiEM&list=RDQMCpeAtcTihcE&index=19" class="linkexe">
+                <img src="imagens/sobre mim.jpg" alt="">
+                <p>projeto1</p>
+            </a>
+        </div>
         
         
-        
-        <img class="img" src="imagens/formacao.jpg" alt="">
-        <div class="texto"><p>texto</p></div>
-
-        
-        
-        
-       
-        <img class="img2" src="imagens/formacao.jpg" alt="">
-        <div class="texto2"><p>texto</p></div>
-
-        
-        
-        
-        <img class="img3" src="imagens/formacao.jpg" alt="">
-        <div class="texto3"><p>texto</p></div>
 
         
         
