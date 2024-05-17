@@ -209,21 +209,31 @@
                 grid-area: 7 / 1 / 8 / 11;
             }
             
+            
+            
+            
+            
             .opcoes{
                 display: block;
                 text-align: left;
                 color: var(--co3); 
                 
             }
-             
+            
+            
+            
+            
+            
             footer{
-                background-color: var(--co1); 
+                background-color: var(--co1); /* Azul marinho para o rodapé */
                 grid-area: 11 / 1 / 11 / 11;
-                color: var(--co3); 
+                color: var(--co3); /* Texto branco */
+            }
             
             .opcoes{
                 text-align: left;
-                color: var(--co3); 
+                color: var(--co3); /* Texto branco */
+                
             }
             
             ul, li{
@@ -242,8 +252,8 @@
             ul li a {
                 display: block;
                 text-decoration: none;
-                color: var(--co3); 
-                background-color: var(--co1);
+                color: var(--co3); /* Texto branco */
+                background-color: var(--co1); /* Azul marinho para botões */
                 padding: 5px;
                 font-size: 25px;
             }
@@ -251,25 +261,29 @@
             ul li a:hover {
                 text-decoration: underline;
                 font-weight: bold;
-                color: var(--co3);
-                background-image: linear-gradient(to right, var(--co1), #13203f);     
+                color: var(--co3); /* Texto branco */
+                background-image: linear-gradient(to right, var(--co1), #13203f); /* Gradiente de azul */
+                
             }
             
             li:hover ul {
                 display: block;
-                background-color: var(--co1); 
+                background-color: var(--co1); /* Azul marinho para botões */
                 max-width:700px;
                 min-width: 400px;
                 height: 300px;
-                top: 33px;    
+                top: 33px;
+                
+                
             }
             ul img{
                 width:35px;
             }
-               
+            
+            
         }
-    }
-       
+    
+        
         @media only screen and (min-width: 991px) {
             .opcoes > a {
                 display: none;
@@ -331,7 +345,12 @@
                 <p>Jogo da cobrinha</p>
             </a>
         </div>
-            
+        
+        
+
+        
+        
+        
         <footer>
             Desenvolvido por Demerson Passos     
         </footer>
