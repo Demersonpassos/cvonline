@@ -10,40 +10,28 @@
             src: url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap') format('opentype');
         }
         @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap');
-        /*
+        
+        /*paleta de cores */
         :root{
-            --co0: white;
-            --co1: #227AE6;
-            --co2: #227AE6;
-            --co3: #22B7E6;
-            --co4: #1cb473;
-            --co5: #223DE6;
-            --co6: #1b2eac;
-            --co7: #57C4E6;
-            
-        }
-        */
-        :root{
-            --co0: #333333; /* Cinza escuro para textos */
-            --co1: #1E2852; /* Azul marinho para cabeçalho e rodapé */
-            --co2: #666666; /* Cinza médio para elementos secundários */
-            --co3: #FFFFFF; /* Branco para fundo */
-            --co4: #2C3E50; /* Azul escuro para destaques */
+            --co0: #333333; 
+            --co1: #1E2852; 
+            --co2: #666666;  
+            --co3: #FFFFFF; 
+            --co4: #2C3E50; 
             --co5: #e6e5e5;
             --co6: #1b264e;
-            --co7:#dde8fd;
-            --co8:#cfd3df;
-            --co9:#eeeef1;
-            --co10:#c6d2db;
-
-            
+            --co7: #dde8fd;
+            --co8: #cfd3df;
+            --co9: #eeeef1;
+            --co10:#c6d2db;   
         }
         body{
             text-align: center;
             margin: 0%;
-            background-color: var(--co3); /* Fundo branco */
-            color: var(--co0); /* Texto cinza escuro */
+            background-color: var(--co3);
+            color: var(--co0); 
         }
+        
         .container{
             display:grid;
             grid-template-columns: repeat(10, 1fr);
@@ -99,12 +87,12 @@
         }
         a{
             padding: 10px;
-            color: var(--co3); /* Texto branco */
-            background-color: var(--co6); /* Azul marinho para botões */
+            color: var(--co3); 
+            background-color: var(--co6); 
             margin: 16px 0px 0px 0px;
             font-family: 'titulo', sans-serif;
-            border-radius: 5px; /* Borda arredondada */
-            transition: background-color 0.3s ease; /* Transição suave de cor */
+            border-radius: 5px; 
+            transition: background-color 0.3s ease; 
         }
         a:hover {
             background-color: #0E1737; /* Azul mais escuro ao passar o mouse */
@@ -112,8 +100,7 @@
         .bemvindo{
             background-color: var(--co7);
             grid-area: 4 / 3 / 4 / 6;
-            font-weight:bold;
-            
+            font-weight:bold; /* alterando peso da fonte*/    
         }
         .sobre{
             background-color: var(--co5);
@@ -137,18 +124,16 @@
         .portifolio,
         .contato
         {
-            box-shadow: 1px 1px 7px var(--co2);
-           
-
+            box-shadow: 1px 1px 7px var(--co2); /*adicionando sombra suave*/
         }
-        
-        
         footer{
-            background-color: var(--co1); /* Azul marinho para o rodapé */
+            background-color: var(--co1); 
             grid-area: 7 / 1 / 7 / 11;
-            color: var(--co3); /* Texto branco */
+            color: var(--co3); 
             padding: 10px;
             }
+
+        /*estilo para telas de largura da até 990px */    
         @media only screen and (max-width: 990px){
             
             .container{
@@ -159,7 +144,7 @@
 
             .bemvindo{
                 grid-area: 4 / 1 / 4 / 11;
-                height: 140px;
+                height: 140px;            
             }
 
             .sobre{
@@ -180,31 +165,36 @@
                 grid-area: 8 / 1 / 8 / 11;
             }
             
+            /*alterando caracteristicas do menu*/
             .opcoes{
                 display: block;
                 text-align: left;
-                color: var(--co3); /* Texto branco */
+                color: var(--co3);
                 
             }
+            /* Define o estilo para listas não ordenadas e itens de lista */
             ul, li{
                 position: relative;
                 margin: -3px 0;
                 padding: 0px;
             }
+            /* Define o estilo para sublistas*/
             li ul {
                 position: absolute;
                 left: 0px;
                 top: 0;
                 display: none;
             }
+            /* Define o estilo para os links dentro dos itens de lista */
             ul li a {
                 display: block;
                 text-decoration:none;
-                color: var(--co3); /* Texto branco */
-                background-color: var(--co1); /* Azul marinho para botões */
+                color: var(--co3);
+                background-color: var(--co1);
                 padding: 5px;
                 font-size: 25px;
             }
+            /* Define o estilo para os links quando o mouse passa por cima */
             ul li a:hover {
                 text-decoration: underline;
                 font-weight: bold;
@@ -213,6 +203,7 @@
                 
                 
             }
+            /* Define o estilo para a sublista quando o item pai é hover */
             li:hover ul {
                 display: block;
                 background-color: var(--co1); /* Azul marinho para botões */
@@ -222,7 +213,7 @@
                 
                 
             }
-            
+            /*defino a largura da imagem do menu*/
             ul img{
                 width:35px;
             }
@@ -230,28 +221,33 @@
             footer{
                 background-color: var(--co1); /* Azul marinho para o rodapé */
                 grid-area: 10 / 1 / 11 / 11;
-                color: var(--co3); /* Texto branco */
+                color: var(--co3);
             }
             
                 
         }
+
+        /*estilo para telas de a partir de 991px*/
         @media only screen and (min-width: 991px) {
+            /* Oculta os links diretos dentro do elemento com a classe 'opcoes' */
             .opcoes > a {
                 display: none;
                 
             }
-            
+            /* Oculta os links diretos dentro do elemento com a classe 'fechar' */
             .fechar > a {
                 display: none;
             }
+            /* Oculta as imagens dentro de listas não ordenadas */
             ul img{
                 display: none;
             }
-            
+            /* Exibe as listas não ordenadas dentro do elemento com a classe 'opcoes' */
             .opcoes ul{
                 display: block;
                 
             }
+            /* Define um estilo de borda para todos os elementos 'a' (links) */
             a{
                 border: solid 1px var(--co4);
             }
@@ -278,9 +274,7 @@
                 </li>
             </ul>
         </nav>
-        <main>
-            <!-- Seu conteúdo principal pode ser adicionado aqui -->
-        </main>
+        
         <div class="bemvindo">
             <p>Seja bem-vindo ao meu espaço online! Aqui, você encontrará uma jornada online, habilidades e conquistas. Meu site é uma janela para quem eu sou, o que faço e como posso contribuir.</p>
         </div>
