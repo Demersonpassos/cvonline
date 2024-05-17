@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Online</title>
-
+    <link rel="shortcut icon" href="imagens/icone.ico" type="image/x-icon">
     <style>
         
         @font-face {
@@ -12,6 +12,7 @@
             src: url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap') format('opentype');
         }
         @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap');
+
         /*paleta de cores */
         :root{
             --co0: #333333; 
@@ -27,8 +28,8 @@
         body{
             text-align: center;
             margin: 0%;
-            background-color: var(--co3); /* Fundo branco */
-            color: var(--co0); /* Texto cinza escuro */
+            background-color: var(--co3);
+            color: var(--co0);
         }
         
         .container{
@@ -99,7 +100,7 @@
             background-color: #0E1737; /* Azul mais escuro ao passar o mouse */
         }
         
-        img{
+        .conteudoimg{
             grid-area: 3 / 6 / 3 / 9;
             width: 400px;
             border-radius: 0px 10px 10px 0px;
@@ -126,7 +127,7 @@
             color: var(--co3);
             padding: 10px;
         }
-        
+        /*estilo para telas de largura da até 990px */ 
         @media only screen and (max-width: 990px){
             .container{
                 display: grid;
@@ -134,6 +135,7 @@
                 grid-template-rows: 50px 50px 400px auto 100px;
             }
             
+
             .conteudoimg{
                 display: block;
                 margin: 0 auto;
@@ -145,7 +147,8 @@
                 height: auto; /* Mantém a proporção da imagem */
                 
             }
-            
+
+            /*alterando caracteristicas do menu*/
             .opcoes{
                 display: block;
                 text-align: left;
@@ -173,32 +176,21 @@
                 text-align: justify;
                 
             }
-            
-            footer{
-                background-color: var(--co1);
-                grid-area: 9 / 1 / 9 / 11;
-                color: var(--co3); 
-            }
-            
-            .opcoes{
-                text-align: left;
-                color: var(--co3); 
-                
-            }
-            
+
+            /* Define o estilo para listas não ordenadas e itens de lista */
             ul, li{
                 position: relative;
                 margin: -3px 0;
                 padding: 0px;
             }
-            
+            /* Define o estilo para sublistas*/
             li ul {
                 position: absolute;
                 left: 0px;
                 top: 0;
                 display: none;
             }
-            
+            /* Define o estilo para os links dentro dos itens de lista */
             ul li a {
                 display: block;
                 text-decoration: none;
@@ -208,14 +200,15 @@
                 font-size: 25px;
             }
             
+            /* Define o estilo para os links quando o mouse passa por cima */
             ul li a:hover {
                 text-decoration: underline;
                 font-weight: bold;
                 color: var(--co3); 
-                background-image: linear-gradient(to right, var(--co1), #13203f); /* Gradiente de azul */
-                
+                background-image: linear-gradient(to right, #13203f , var(--co1)); /* Gradiente de azul */     
             }
             
+            /* Define o estilo para a sublista quando o item pai é hover */
             li:hover ul {
                 display: block;
                 background-color: var(--co1); 
@@ -225,28 +218,35 @@
                 
                 
             }
+            /*defino a largura da imagem do menu*/
             ul img{
                 width:35px;
             }
+            footer{
+                background-color: var(--co1);
+                grid-area: 9 / 1 / 9 / 11;
+                color: var(--co3); 
+            }
         }
         
+        /*estilo para telas de a partir de 991px*/
         @media only screen and (min-width: 991px) {
+            /* Oculta os links diretos dentro do elemento com a classe 'opcoes' */
             .opcoes > a {
                 display: none;
                 
             }
             
-            .fechar > a {
-                display: none;
-            }
+            /* Oculta as imagens dentro de listas não ordenadas */
             ul img{
                 display: none;
             }
-            
+            /* Exibe as listas não ordenadas dentro do elemento com a classe 'opcoes' */
             .opcoes ul{
                 display: block;
                 
             }
+            /* Define um estilo de borda para todos os elementos 'a' (links) */
             a{
                 border: solid 1px var(--co4);
             }

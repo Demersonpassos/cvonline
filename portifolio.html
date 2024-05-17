@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Online</title>
-
+    <link rel="shortcut icon" href="imagens/icone.ico" type="image/x-icon">
     <style>
         
         @font-face {
@@ -12,7 +12,7 @@
             src: url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap') format('opentype');
         }
         @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap');
-        
+        /*paleta de cores */
         :root{
             --co0: #333333; 
             --co1: #1E2852;
@@ -101,24 +101,15 @@
             background-color: var(--co6); 
             margin: 16px 0px 0px 0px;
             font-family: 'titulo', sans-serif;
-            border-radius: 5px; 
-            transition: background-color 0.3s ease; 
+            border-radius: 5px; /* Borda arredondada */
+            transition: background-color 0.3s ease; /* Transição suave de cor */
             
         }
         
 
         a:hover {
-            background-color: #0E1737;
+            background-color: #0E1737;/* Azul mais escuro ao passar o mouse */
             width: 100%; 
-        }
-        
-        
-
-        footer{
-            background-color: var(--co1); 
-            grid-area: 7 / 1 / 7 / 11;
-            color: var(--co3); 
-            padding: 10px;
         }
         
         .link1 , .link2, .link3 {
@@ -158,8 +149,10 @@
         
         .link1 a:hover {
             background-color: transparent;
-            color: inherit;
+            color: inherit;           
         }
+
+        
         .link1 p,
         .link2 p,
         .link3 p {
@@ -185,10 +178,15 @@
             padding: 0%;
             
         }
-        
+        footer{
+            background-color: var(--co1); 
+            grid-area: 7 / 1 / 7 / 11;
+            color: var(--co3); 
+            padding: 10px;
+        }
 
         
-        
+        /*estilo para telas de largura da até 990px */
         @media only screen and (max-width: 990px){
             .container{
                 display: grid;
@@ -213,46 +211,26 @@
                 grid-area: 7 / 1 / 8 / 11;
             }
             
-            
-            
-            
-            
             .opcoes{
                 display: block;
                 text-align: left;
                 color: var(--co3); 
                 
             }
-            
-            
-            
-            
-            
-            footer{
-                background-color: var(--co1); 
-                grid-area: 11 / 1 / 11 / 11;
-                color: var(--co3); 
-            }
-            
-            .opcoes{
-                text-align: left;
-                color: var(--co3); 
-                
-            }
-            
+            /* Define o estilo para listas não ordenadas e itens de lista */
             ul, li{
                 position: relative;
                 margin: -3px 0;
                 padding: 0px;
             }
-            
+            /* Define o estilo para sublistas*/
             li ul {
                 position: absolute;
                 left: 0px;
                 top: 0;
                 display: none;
             }
-            
+            /* Define o estilo para os links dentro dos itens de lista */
             ul li a {
                 display: block;
                 text-decoration: none;
@@ -261,15 +239,15 @@
                 padding: 5px;
                 font-size: 25px;
             }
-            
+            /* Define o estilo para os links quando o mouse passa por cima */
             ul li a:hover {
                 text-decoration: underline;
                 font-weight: bold;
                 color: var(--co3); 
-                background-image: linear-gradient(to right, var(--co1), #13203f); /* Gradiente de azul */
+                background-image: linear-gradient(to right, #13203f , var(--co1)); /* Gradiente de azul */
                 
             }
-            
+            /* Define o estilo para a sublista quando o item pai é hover */
             li:hover ul {
                 display: block;
                 background-color: var(--co1);
@@ -280,23 +258,26 @@
                 
                 
             }
+            /*defino a largura da imagem do menu*/
             ul img{
                 width:35px;
             }
-            
+
+            footer{
+                background-color: var(--co1); 
+                grid-area: 11 / 1 / 11 / 11;
+                color: var(--co3); 
+            }
             
         }
     
-        
+        /*estilo para telas de a partir de 991px*/
         @media only screen and (min-width: 991px) {
             .opcoes > a {
                 display: none;
                 
             }
             
-            .fechar > a {
-                display: none;
-            }
             ul img{
                 display: none;
             }
